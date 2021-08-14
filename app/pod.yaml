@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: docker-gestarted
+  labels:
+    app.kubernetes.io/name: web-example
+spec:
+  containers:
+    - name: web
+      image: aconchas/g-started
+      ports:
+        - name: web
+          containerPort: 3000
+          protocol: TCP
